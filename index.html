@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduQuest – Gamified STEM Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Selection Screen -->
+    <div id="language-screen" class="screen active">
+        <div class="container">
+            <div class="header">
+                <img src="https://placeholder-image-service.onrender.com/image/200x100?prompt=bright%20educational%20logo%20with%20stars%20and%20science%20symbols&id=lang-logo-1" alt="EduQuest logo with stars and science symbols" class="logo">
+                <h1>EduQuest</h1>
+                <p class="subtitle">Gamified STEM Learning</p>
+            </div>
+            
+            <div class="language-selection">
+                <h2>Choose Your Language</h2>
+                <div class="language-options">
+                    <button class="language-btn" data-lang="en">
+                        <img src="https://placeholder-image-service.onrender.com/image/80x80?prompt=British%20flag%20icon&id=lang-en-1" alt="British flag representing English language">
+                        <span>English</span>
+                    </button>
+                    <button class="language-btn" data-lang="es">
+                        <img src="https://placeholder-image-service.onrender.com/image/80x80?prompt=Spanish%20flag%20icon&id=lang-es-1" alt="Spanish flag representing Spanish language">
+                        <span>Español</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Screen -->
+    <div id="dashboard-screen" class="screen">
+        <header class="app-header">
+            <div class="header-content">
+                <button id="menu-btn" class="icon-btn">
+                    <img src="https://placeholder-image-service.onrender.com/image/30x30?prompt=hamburger%20menu%20icon&id=menu-icon-1" alt="Navigation menu">
+                </button>
+                <h1>EduQuest</h1>
+                <button id="profile-btn" class="icon-btn">
+                    <img src="https://placeholder-image-service.onrender.com/image/30x30?prompt=user%20profile%20icon&id=profile-icon-1" alt="User profile">
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <!-- User Progress Section -->
+            <section class="progress-section">
+                <div class="welcome-banner">
+                    <h2>Hello, <span id="username">Student</span>!</h2>
+                    <div class="progress-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="total-points">0</span>
+                            <span class="stat-label">Points</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="badges-count">0</span>
+                            <span class="stat-label">Badges</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="lessons-completed">0</span>
+                            <span class="stat-label">Lessons</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="badges-display">
+                    <h3>Your Badges</h3>
+                    <div class="badges-grid">
+                        <div class="badge locked">
+                            <img src="https://placeholder-image-service.onrender.com/image/70x70?prompt=math%20whiz%20badge%20with%20calculator%20and%20stars&id=badge-math-1" alt="Math Whiz badge with calculator and stars">
+                            <span>Math Whiz</span>
+                        </div>
+                        <div class="badge locked">
+                            <img src="https://placeholder-image-service.onrender.com/image/70x70?prompt=science%20explorer%20badge%20with%20microscope&id=badge-science-1" alt="Science Explorer badge with microscope">
+                            <span>Science Explorer</span>
+                        </div>
+                        <div class="badge locked">
+                            <img src="https://placeholder-image-service.onrender.com/image/70x70?prompt=technology%20master%20badge%20with%20circuit%20board&id=badge-tech-1" alt="Technology Master badge with circuit board">
+                            <span>Tech Master</span>
+                        </div>
+                        <div class="badge locked">
+                            <img src="https://placeholder-image-service.onrender.com/image/70x70?prompt=engineering%20builder%20badge%20with%20gears&id=badge-eng-1" alt="Engineering Builder badge with gears">
+                            <span>Engineering Builder</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Materials Section -->
+            <section class="materials-section">
+                <div class="section-header">
+                    <h3>Learning Materials</h3>
+                    <button id="upload-btn" class="primary-btn">
+                        <img src="https://placeholder-image-service.onrender.com/image/20x20?prompt=upload%20icon&id=upload-icon-1" alt="Upload materials">
+                        Upload
+                    </button>
+                </div>
+                
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <div class="material-thumbnail">
+                            <img src="https://placeholder-image-service.onrender.com/image/120x120?prompt=math%20textbook%20cover%20with%20numbers%20and%20formulas&id=material-math-1" alt="Mathematics textbook cover">
+                        </div>
+                        <div class="material-info">
+                            <h4>Mathematics Basics</h4>
+                            <p>Algebra and Geometry fundamentals</p>
+                            <div class="material-meta">
+                                <span class="file-type">PDF</span>
+                                <span class="file-size">2.4 MB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="material-card">
+                        <div class="material-thumbnail">
+                            <img src="https://placeholder-image-service.onrender.com/image/120x120?prompt=science%20book%20cover%20with%20atom%20diagram&id=material-science-1" alt="Science textbook cover">
+                        </div>
+                        <div class="material-info">
+                            <h4>Science Wonders</h4>
+                            <p>Physics and Chemistry experiments</p>
+                            <div class="material-meta">
+                                <span class="file-type">PDF</span>
+                                <span class="file-size">3.1 MB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lessons Section -->
+            <section class="lessons-section">
+                <h3>STEM Lessons</h3>
+                <div class="lessons-grid">
+                    <div class="lesson-card" data-lesson="math">
+                        <div class="lesson-icon">
+                            <img src="https://placeholder-image-service.onrender.com/image/60x60?prompt=math%20lesson%20icon%20with%20calculator&id=lesson-math-1" alt="Mathematics lesson icon">
+                        </div>
+                        <div class="lesson-info">
+                            <h4>Mathematics Puzzle</h4>
+                            <p>Solve equations and unlock rewards</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <button class="start-lesson-btn">Start</button>
+                    </div>
+                    
+                    <div class="lesson-card" data-lesson="science">
+                        <div class="lesson-icon">
+                            <img src="https://placeholder-image-service.onrender.com/image/60x60?prompt=science%20lesson%20icon%20with%20flask&id=lesson-science-1" alt="Science lesson icon">
+                        </div>
+                        <div class="lesson-info">
+                            <h4>Science Quiz</h4>
+                            <p>Test your knowledge of scientific concepts</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <button class="start-lesson-btn">Start</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Upload Modal -->
+        <div id="upload-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Upload Learning Material</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="upload-area" id="drop-zone">
+                        <img src="https://placeholder-image-service.onrender.com/image/80x80?prompt=upload%20file%20icon&id=upload-area-icon-1" alt="File upload icon">
+                        <p>Drag & drop files here or click to browse</p>
+                        <input type="file" id="file-input" hidden accept=".pdf,.doc,.docx,.ppt,.pptx,.txt,.jpg,.png">
+                    </div>
+                    <div class="upload-preview" id="upload-preview" style="display: none;">
+                        <div class="preview-item">
+                            <img src="https://placeholder-image-service.onrender.com/image/50x50?prompt=document%20icon&id=preview-doc-1" alt="Document preview">
+                            <div class="preview-info">
+                                <span class="file-name">document.pdf</span>
+                                <span class="file-size">2.4 MB</span>
+                            </div>
+                            <button class="remove-file">&times;</button>
+                        </div>
+                    </div>
+                    <div class="upload-actions">
+                        <button class="secondary-btn" id="cancel-upload">Cancel</button>
+                        <button class="primary-btn" id="confirm-upload" disabled>Upload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="game-header">
+            <button id="back-to-dashboard" class="icon-btn">
+                <img src="https://placeholder-image-service.onrender.com/image/30x30?prompt=back%20arrow%20icon&id=back-icon-1" alt="Back to dashboard">
+            </button>
+            <div class="game-stats">
+                <span class="points">Points: <span id="game-points">0</span></span>
+                <span class="timer">Time: <span id="game-timer">60</span>s</span>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <h2 id="game-title">Math Puzzle Challenge</h2>
+            <div id="game-content">
+                <div class="math-problem">
+                    <p id="problem-text">Solve the equation: 2x + 5 = 15</p>
+                    <div class="answer-input">
+                        <label for="math-answer">x = </label>
+                        <input type="number" id="math-answer" step="any">
+                    </div>
+                    <button id="check-answer" class="primary-btn">Check Answer</button>
+                </div>
+                
+                <div class="feedback-message" id="feedback-message" style="display: none;">
+                    <p id="feedback-text"></p>
+                    <button id="next-problem" class="primary-btn">Next Problem</button>
+                </div>
+            </div>
+            
+            <div class="game-progress">
+                <p>Problems solved: <span id="problems-solved">0</span>/5</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Drawer -->
+    <div id="nav-drawer" class="drawer">
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <img src="https://placeholder-image-service.onrender.com/image/60x60?prompt=student%20avatar&id=avatar-1" alt="Student avatar" class="user-avatar">
+                <div class="user-info">
+                    <span id="drawer-username">Student</span>
+                    <span class="user-level">Level 1 Explorer</span>
+                </div>
+            </div>
+            
+            <nav class="drawer-nav">
+                <a href="#" class="nav-item active">
+                    <img src="https://placeholder-image-service.onrender.com/image/24x24?prompt=home%20icon&id=nav-home-1" alt="Home">
+                    <span>Dashboard</span>
+                </a>
+                <a href="dashboard.html" class="nav-item">
+                    <img src="https://placeholder-image-service.onrender.com/image/24x24?prompt=teacher%20dashboard%20icon&id=nav-teacher-1" alt="Teacher dashboard">
+                    <span>Teacher View</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="https://placeholder-image-service.onrender.com/image/24x24?prompt=settings%20icon&id=nav-settings-1" alt="Settings">
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="nav-item" id="export-data">
+                    <img src="https://placeholder-image-service.onrender.com/image/24x24?prompt=export%20icon&id=nav-export-1" alt="Export data">
+                    <span>Export Progress</span>
+                </a>
+                <a href="#" class="nav-item" id="import-data">
+                    <img src="https://placeholder-image-service.onrender.com/image/24x24?prompt=import%20icon&id=nav-import-1" alt="Import data">
+                    <span>Import Progress</span>
+                </a>
+            </nav>
+            
+            <div class="drawer-footer">
+                <button id="logout-btn" class="secondary-btn">Log Out</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        // Register service worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+
+        // DOM elements
+        const languageScreen = document.getElementById('language-screen');
+        const dashboardScreen = document.getElementById('dashboard-screen');
+        const gameScreen = document.getElementById('game-screen');
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const menuBtn = document.getElementById('menu-btn');
+        const navDrawer = document.getElementById('nav-drawer');
+        const uploadBtn = document.getElementById('upload-btn');
+        const uploadModal = document.getElementById('upload-modal');
+        const closeModalBtn = document.querySelector('.close-modal');
+        const cancelUploadBtn = document.getElementById('cancel-upload');
+        const fileInput = document.getElementById('file-input');
+        const dropZone = document.getElementById('drop-zone');
+        const startLessonBtns = document.querySelectorAll('.start-lesson-btn');
+        const backToDashboardBtn = document.getElementById('back-to-dashboard');
+        const checkAnswerBtn = document.getElementById('check-answer');
+        const nextProblemBtn = document.getElementById('next-problem');
+        const mathAnswerInput = document.getElementById('math-answer');
+        const feedbackMessage = document.getElementById('feedback-message');
+        
+        // User data
+        let userData = {
+            username: 'Student',
+            language: 'en',
+            points: 0,
+            badges: [],
+            lessonsCompleted: 0,
+            mathProgress: 0,
+            scienceProgress: 0
+        };
+
+        // Initialize app
+        function initApp() {
+            // Load user data from localStorage if available
+            const savedData = localStorage.getItem('eduquest_user');
+            if (savedData) {
+                userData = JSON.parse(savedData);
+                updateDashboard();
+                languageScreen.classList.remove('active');
+                dashboardScreen.classList.add('active');
+            }
+            
+            // Set up event listeners
+            setupEventListeners();
+        }
+
+        // Set up all event listeners
+        function setupEventListeners() {
+            // Language selection
+            languageButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    userData.language = btn.dataset.lang;
+                    languageScreen.classList.remove('active');
+                    dashboardScreen.classList.add('active');
+                    saveUserData();
+                });
+            });
+
+            // Menu button
+            menuBtn.addEventListener('click', () => {
+                navDrawer.classList.toggle('open');
+            });
+
+            // Close drawer when clicking outside
+            document.addEventListener('click', (e) => {
+                if (navDrawer.classList.contains('open') && 
+                    !navDrawer.contains(e.target) && 
+                    e.target !== menuBtn) {
+                    navDrawer.classList.remove('open');
+                }
+            });
+
+            // Upload functionality
+            uploadBtn.addEventListener('click', () => {
+                uploadModal.style.display = 'block';
+            });
+
+            closeModalBtn.addEventListener('click', closeUploadModal);
+            cancelUploadBtn.addEventListener('click', closeUploadModal);
+
+            // File upload handling
+            dropZone.addEventListener('click', () => {
+                fileInput.click();
+            });
+
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            });
+
+            dropZone.addEventListener('dragleave', () => {
+                dropZone.classList.remove('dragover');
+            });
+
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+                handleFiles(e.dataTransfer.files);
+            });
+
+            fileInput.addEventListener('change', () => {
+                handleFiles(fileInput.files);
+            });
+
+            // Lesson start buttons
+            startLessonBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lessonType = btn.closest('.lesson-card').dataset.lesson;
+                    startLesson(lessonType);
+                });
+            });
+
+            // Back to dashboard from game
+            backToDashboardBtn.addEventListener('click', () => {
+                gameScreen.classList.remove('active');
+                dashboardScreen.classList.add('active');
+            });
+
+            // Game functionality
+            checkAnswerBtn.addEventListener('click', checkMathAnswer);
+            nextProblemBtn.addEventListener('click', generateMathProblem);
+            mathAnswerInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    checkMathAnswer();
+                }
+            });
+
+            // Export/Import data
+            document.getElementById('export-data').addEventListener('click', exportUserData);
+            document.getElementById('import-data').addEventListener('click', importUserData);
+        }
+
+        // Handle file uploads
+        function handleFiles(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                const preview = document.getElementById('upload-preview');
+                const confirmBtn = document.getElementById('confirm-upload');
+                
+                // Show preview
+                preview.style.display = 'block';
+                preview.querySelector('.file-name').textContent = file.name;
+                preview.querySelector('.file-size').textContent = formatFileSize(file.size);
+                
+                // Enable upload button
+                confirmBtn.disabled = false;
+                
+                // Set up remove functionality
+                preview.querySelector('.remove-file').addEventListener('click', () => {
+                    preview.style.display = 'none';
+                    fileInput.value = '';
+                    confirmBtn.disabled = true;
+                });
+                
+                // Set up confirm upload
+                confirmBtn.onclick = () => {
+                    // In a real app, you would upload to a server
+                    // For this prototype, we'll just simulate success
+                    alert(`File "${file.name}" uploaded successfully!`);
+                    closeUploadModal();
+                    
+                    // Add to materials grid (simulated)
+                    addMaterialToGrid(file.name, formatFileSize(file.size));
+                };
+            }
+        }
+
+        // Add material to grid (simulated)
+        function addMaterialToGrid(name, size) {
+            const materialsGrid = document.querySelector('.materials-grid');
+            const newMaterial = document.createElement('div');
+            newMaterial.className = 'material-card';
+            newMaterial.innerHTML = `
+                <div class="material-thumbnail">
+                    <img src="https://placeholder-image-service.onrender.com/image/120x120?prompt=document%20icon&id=material-new-1" alt="Uploaded document">
+                </div>
+                <div class="material-info">
+                    <h4>${name.split('.')[0]}</h4>
+                    <p>Uploaded learning material</p>
+                    <div class="material-meta">
+                        <span class="file-type">${name.split('.').pop().toUpperCase()}</span>
+                        <span class="file-size">${size}</span>
+                    </div>
+                </div>
+            `;
+            materialsGrid.appendChild(newMaterial);
+        }
+
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            else if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+            else return (bytes / 1048576).toFixed(1) + ' MB';
+        }
+
+        // Close upload modal
+        function closeUploadModal() {
+            uploadModal.style.display = 'none';
+            document.getElementById('upload-preview').style.display = 'none';
+            document.getElementById('confirm-upload').disabled = true;
+            fileInput.value = '';
+        }
+
+        // Start a lesson
+        function startLesson(lessonType) {
+            dashboardScreen.classList.remove('active');
+            gameScreen.classList.add('active');
+            
+            if (lessonType === 'math') {
+                initMathGame();
+            } else if (lessonType === 'science') {
+                // Science game would be implemented similarly
+                alert('Science quiz coming soon!');
+                dashboardScreen.classList.add('active');
+                gameScreen.classList.remove('active');
+            }
+        }
+
+        // Initialize math game
+        function initMathGame() {
+            document.getElementById('game-points').textContent = userData.points;
+            document.getElementById('problems-solved').textContent = '0';
+            document.querySelector('.progress-fill').style.width = '0%';
+            
+            generateMathProblem();
+        }
+
+        // Generate a math problem
+        function generateMathProblem() {
+            feedbackMessage.style.display = 'none';
+            mathAnswerInput.value = '';
+            mathAnswerInput.focus();
+            
+            // Simple problem generation for prototype
+            const a = Math.floor(Math.random() * 10) + 1;
+            const b = Math.floor(Math.random() * 10) + 1;
+            const c = a + b;
+            
+            document.getElementById('problem-text').textContent = `Solve: ${a} + ${b} = ?`;
+            mathAnswerInput.dataset.expected = c;
+        }
+
+        // Check math answer
+        function checkMathAnswer() {
+            const userAnswer = parseInt(mathAnswerInput.value);
+            const expectedAnswer = parseInt(mathAnswerInput.dataset.expected);
+            const feedbackText = document.getElementById('feedback-text');
+            
+            if (isNaN(userAnswer)) {
+                feedbackText.textContent = 'Please enter a valid number!';
+                feedbackText.parentElement.style.color = '#ff4757';
+            } else if (userAnswer === expectedAnswer) {
+                // Correct answer
+                userData.points += 10;
+                const problemsSolved = parseInt(document.getElementById('problems-solved').textContent) + 1;
+                document.getElementById('problems-solved').textContent = problemsSolved;
+                document.querySelector('.progress-fill').style.width = `${problemsSolved * 20}%`;
+                document.getElementById('game-points').textContent = userData.points;
+                
+                feedbackText.textContent = 'Correct! Great job! +10 points';
+                feedbackText.parentElement.style.color = '#2ed573';
+                
+                // Check if game completed
+                if (problemsSolved >= 5) {
+                    feedbackText.textContent = 'Congratulations! You completed the math challenge!';
+                    userData.mathProgress = 100;
+                    userData.lessonsCompleted++;
+                    awardBadge('math');
+                }
+            } else {
+                // Wrong answer
+                feedbackText.textContent = `Incorrect. The answer is ${expectedAnswer}. Try again!`;
+                feedbackText.parentElement.style.color = '#ff4757';
+            }
+            
+            feedbackMessage.style.display = 'block';
+            saveUserData();
+            updateDashboard();
+        }
+
+        // Award badge
+        function awardBadge(type) {
+            if (!userData.badges.includes(type)) {
+                userData.badges.push(type);
+                
+                // Unlock badge visually
+                const badgeElement = document.querySelector(`.badge.locked:nth-child(${type === 'math' ? 1 : type === 'science' ? 2 : type === 'tech' ? 3 : 4})`);
+                if (badgeElement) {
+                    badgeElement.classList.remove('locked');
+                }
+            }
+        }
+
+        // Update dashboard with current user data
+        function updateDashboard() {
+            document.getElementById('username').textContent = userData.username;
+            document.getElementById('drawer-username').textContent = userData.username;
+            document.getElementById('total-points').textContent = userData.points;
+            document.getElementById('badges-count').textContent = userData.badges.length;
+            document.getElementById('lessons-completed').textContent = userData.lessonsCompleted;
+            
+            // Update progress bars
+            document.querySelector('[data-lesson="math"] .progress-fill').style.width = `${userData.mathProgress}%`;
+            document.querySelector('[data-lesson="science"] .progress-fill').style.width = `${userData.scienceProgress}%`;
+            
+            // Update badges
+            userData.badges.forEach(badge => {
+                const badgeElement = document.querySelector(`.badge.locked:nth-child(${badge === 'math' ? 1 : badge === 'science' ? 2 : badge === 'tech' ? 3 : 4})`);
+                if (badgeElement) {
+                    badgeElement.classList.remove('locked');
+                }
+            });
+        }
+
+        // Save user data to localStorage
+        function saveUserData() {
+            localStorage.setItem('eduquest_user', JSON.stringify(userData));
+        }
+
+        // Export user data as JSON file
+        function exportUserData() {
+            const dataStr = JSON.stringify(userData, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = 'eduquest_progress.json';
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+
+        // Import user data from JSON file
+        function importUserData() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            
+            input.onchange = e => {
+                const file = e.target.files[0];
+                const reader = new FileReader();
+                
+                reader.onload = function(event) {
+                    try {
+                        const importedData = JSON.parse(event.target.result);
+                        userData = {...userData, ...importedData};
+                        saveUserData();
+                        updateDashboard();
+                        alert('Progress data imported successfully!');
+                    } catch (error) {
+                        alert('Error importing file. Please make sure it is a valid EduQuest progress file.');
+                    }
+                };
+                
+                reader.readAsText(file);
+            };
+            
+            input.click();
+        }
+
+        // Initialize the app when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+</script>
+</body>
+</html>
